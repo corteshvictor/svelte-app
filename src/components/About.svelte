@@ -1,5 +1,8 @@
 <script>
     let someText = `Frontend Developer`;
+    let count = 0;
+
+    const handleClick = () => count += 1;  
 </script>
 
 <style>
@@ -11,5 +14,6 @@
 
 <section class="About">
     <p>{someText}</p>
+    <button on:click={handleClick}>Click {count == 0 ? '' : count}</button>
 </section>
 

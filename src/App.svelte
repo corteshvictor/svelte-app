@@ -1,5 +1,6 @@
 <script>
 	import About from "./components/About.svelte";
+	import Text from "./components/Text.svelte";
 
 	export let name;
 	export let lastName;
@@ -9,6 +10,8 @@
 <main>
 	<h1>Hello {name} {lastName}!</h1>
 	<About />
+	<Text anotherText="hello, this is a prop!" />
+	<Text />
 	<img src={svelteLogo} alt="Svelte" />
 </main>
 

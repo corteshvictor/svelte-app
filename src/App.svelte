@@ -1,10 +1,17 @@
 <script>
 	import About from "./components/About.svelte";
 	import Text from "./components/Text.svelte";
+	import Person from "./components/Person.svelte";
 
 	export let name;
 	export let lastName;
 	let svelteLogo = "https://cdn.svgporn.com/logos/svelte.svg"
+
+	const data = {
+		name: "Victor",
+		lastName: "Cortés",
+		age:34,
+	}
 </script>
 
 <main>
@@ -12,6 +19,8 @@
 	<About />
 	<Text anotherText="hello, this is a prop!" />
 	<Text />
+	<Person name={data.name} lastName={data.lastName} age={data.age} />
+	<Person {...data} />
 	<img src={svelteLogo} alt="Svelte" />
 </main>
 

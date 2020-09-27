@@ -2,6 +2,7 @@
 	import About from "./components/About.svelte";
 	import Text from "./components/Text.svelte";
 	import Person from "./components/Person.svelte";
+	import Skills from "./components/Skills.svelte";
 
 	export let name;
 	export let lastName;
@@ -21,6 +22,7 @@
 	<Text />
 	<Person name={data.name} lastName={data.lastName} age={data.age} />
 	<Person {...data} />
+	<Skills />
 	<img src={svelteLogo} alt="Svelte" />
 </main>
 
@@ -35,7 +37,6 @@
 	}
 
 	:global(body.dark-mode) {
-		transition: background-color 500ms, color 500ms;
 		background-color: #1d3040;
 		color:#bfc2c7;
 		--theme-color:#bfc2c7;
